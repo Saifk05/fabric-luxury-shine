@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  --app-primary: #12b7d6;
+  --app-primary-dark: #0793b0;
+  --app-primary-light: #d8f5fb;
+
+  --app-secondary: #ffd43b;
+  --app-secondary-dark: #e4b800;
+  --app-secondary-light: #fff5bf;
+
+  --app-background: #ffffff;
+  --app-background-soft: #f8fbfc;
+  --app-background-blue: #cff5fb;
+  --app-background-yellow: #fff0ae;
+  --app-background-dark: #171b1d;
+
+  --app-surface: #ffffff;
+  --app-surface-soft: #f8fbfc;
+  --app-surface-dark: #202628;
+
+  --app-text-primary: #171b1d;
+  --app-text-secondary: #657176;
+  --app-text-muted: #929da1;
+  --app-text-light: #ffffff;
+
+  --app-border: #e3ecef;
+  --app-border-dark: #30383b;
+
+  --app-success: #20a464;
+  --app-warning: #e4b800;
+  --app-danger: #dc4545;
+  --app-info: #12b7d6;
+
+  --app-font-body: 'Inter', sans-serif;
+  --app-font-heading: 'Manrope', sans-serif;
+
+  --app-font-size-xs: 12px;
+  --app-font-size-sm: 14px;
+  --app-font-size-md: 16px;
+  --app-font-size-lg: 18px;
+  --app-font-size-xl: 24px;
+  --app-font-size-2xl: 32px;
+  --app-font-size-3xl: 48px;
+  --app-font-size-4xl: 64px;
+
+  --app-radius-sm: 8px;
+  --app-radius-md: 12px;
+  --app-radius-lg: 18px;
+  --app-radius-xl: 26px;
+  --app-radius-round: 999px;
+
+  --app-space-xs: 4px;
+  --app-space-sm: 8px;
+  --app-space-md: 16px;
+  --app-space-lg: 24px;
+  --app-space-xl: 32px;
+  --app-space-2xl: 48px;
+  --app-space-3xl: 72px;
+  --app-space-4xl: 100px;
+
+  --app-shadow-sm:
+    0 2px 10px rgba(23, 27, 29, 0.05);
+
+  --app-shadow-md:
+    0 10px 30px rgba(23, 27, 29, 0.08);
+
+  --app-shadow-lg:
+    0 20px 60px rgba(23, 27, 29, 0.12);
+
+  --app-container-width: 1280px;
+  --app-page-padding: 48px;
+
+  --app-transition: 0.25s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+
+  scroll-behavior: smooth;
+}
+
+body,
+app-root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--app-background);
+  color: var(--app-text-primary);
+
+  font-family: var(--app-font-body);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+app-root {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
+  color: var(--app-text-primary);
+
+  font-family: var(--app-font-heading);
+  font-weight: 700;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+  font-family: var(--app-font-body);
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.app-container {
+  width: 100%;
+  max-width: var(--app-container-width);
+
+  margin: 0 auto;
+
+  padding-left: var(--app-page-padding);
+  padding-right: var(--app-page-padding);
+}
+
+.section-heading {
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: var(--app-text-primary);
+
+  font-family: var(--app-font-heading);
+
+  font-size: var(--app-font-size-2xl);
+  font-weight: 700;
+
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.section-heading p {
+  margin: 8px 0 0;
+
+  color: var(--app-text-secondary);
+
+  font-size: var(--app-font-size-sm);
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--app-secondary);
+  color: var(--app-text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--app-background-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background: #b7cdd3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--app-primary);
+}
+
+@media (max-width: 992px) {
+  :root {
+    --app-page-padding: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --app-page-padding: 20px;
+
+    --app-font-size-3xl: 40px;
+    --app-font-size-4xl: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --app-page-padding: 16px;
+
+    --app-font-size-2xl: 28px;
+    --app-font-size-3xl: 34px;
+    --app-font-size-4xl: 40px;
+  }
+}
